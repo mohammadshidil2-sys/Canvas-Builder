@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Canvas Builder — 3D Grid Builder</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <link rel="stylesheet" href="styles.css">
+  <!-- Three.js from CDN -->
+  <script src="https://unpkg.com/three@0.158.0/build/three.min.js"></script>
+  <script src="https://unpkg.com/three@0.158.0/examples/js/controls/OrbitControls.js"></script>
+</head>
+<body>
+  <div id="ui">
+    <div class="panel">
+      <h3>Prefabs</h3>
+      <button class="prefab" data-prefab="house">House</button>
+      <button class="prefab" data-prefab="tower">Tower</button>
+      <button class="prefab" data-prefab="wall">Wall</button>
+      <hr>
+      <button id="rotateLeft">⟲ Rotate</button>
+      <button id="rotateRight">⟳ Rotate</button>
+      <button id="deleteSelected">Delete</button>
+      <hr>
+      <button id="undoBtn">Undo</button>
+      <button id="saveBtn">Save</button>
+      <button id="loadBtn">Load</button>
+      <button id="downloadBtn">Download JSON</button>
+    </div>
+    <div id="hint">Tap to place. Drag to move camera. Pinch to zoom.</div>
+  </div>
+
+  <canvas id="three-canvas"></canvas>
+
+  <input type="file" id="fileInput" accept="application/json" style="display:none">
+
+  <script src="app.js"></script>
+</body>
+</html>
